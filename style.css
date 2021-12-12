@@ -1,0 +1,22 @@
+.konvensi select {
+    min-width: 1rem;
+    min-height: 2rem;
+    text-align: center;
+    border-radius: 2px;
+    border: 1px solid rgb(206, 212, 218);
+    background-color: #e9ecef;
+}
+/* 
+.btn {
+    width: 20rem;
+    height: 2.5rem;
+} */
+
+.konvensi div span {
+    min-width: 133px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
