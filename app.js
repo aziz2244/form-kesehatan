@@ -106,7 +106,7 @@ function addDate() {
         UI.BuatTable(data);
         Store.addPerson(data);
         UI.ClearInput();
-        UI.ShowAlert('Data berhasil di simpan', 'alert-success');
+        UI.ShowAlert('Data berhasil di simpan', 'alert-primary');
     }
 };
 
