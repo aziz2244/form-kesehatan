@@ -20,3 +20,7 @@ a {
     color: white;
     text-decoration: none;
 }
+
+.card {
+    min-height: 228px;
+}
