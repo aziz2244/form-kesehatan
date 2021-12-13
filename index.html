@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
   <link rel="stylesheet" href="style.css">
-  <title>Konvensi Bilangan</title>
+  <title>Note Kesehatan</title>
 </head>
 
 <body class="bg-success">
@@ -35,7 +35,7 @@
               </div>
               <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1">Tekanan Darah</span>
-                <input type="number" class="form-control tekanan-darah" placeholder="Tekanan Darah"
+                <input type="text" class="form-control tekanan-darah" placeholder="Tekanan Darah"
                   aria-label="Tekanan Darah" aria-describedby="basic-addon1">
               </div>
               <div class="input-group mb-3">
@@ -64,52 +64,73 @@
           </div>
         </div>
 
-        <div class="col-sm-6 pb-4 order-3 order-sm-2">
+        <div class="col-sm-6 pb-4 order-5 order-sm-2">
           <div class="card text-center p-3 table">
             <h1 class="pt-3 pb-4 heading">Standar Kesehatan</h1>
             <table class="table table-bordered">
               <thead class="table-dark">
                 <tr>
-                  <th>Tensi</th>
-                  <td>120/80 mmHg</td>
-                </tr>
-                <th>Gula Darah</th>
-                <td>120/80 mmHg</td>
-                <tr>
-                  <th>Kolestrol</th>
-                  <td>120/80 mmHg</td>
-                </tr>
-                <th>Asam Urat</th>
-                <td>120/80 mmHg</td>
-              </thead>
-              <tbody>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="w-100"></div>
-        <div class="col-sm-12 order-2 order-sm-3 pb-4">
-          <div class="card text-center p-3 table table-responsive">
-            <h1 class="pt-3 pb-4 heading">Data Kesehatan</h1>
-            <table class="table table-bordered table-striped table-hover">
-              <thead class="table-dark">
-                <tr>
-                  <th>Nama</th>
-                  <th>Tanggal</th>
+                  <th>Usia</th>
                   <th>Tensi</th>
                   <th>Gula Darah</th>
                   <th>Kolestrol</th>
                   <th>Asam Urat</th>
-                  <th></th>
                 </tr>
               </thead>
-              <tbody class="list"></tbody>
+              <tbody>
+                <tr>
+                  <td>13-18</td>
+                  <td>Sistolik : 112/128 <br> Diastolik : 66/80</td>
+                  <td> 100 mg/dL</td>
+                  <td>60-100 mg/dL</td>
+                </tr>
+                <tr>
+                  <td>Dewasa</td>
+                  <td>120/80 mmHg</td>
+                  <td>70-130 mg/dL</td>
+                  <td>60-100 mg/dL</td>
+                  <td>Wanita : 2,5-7,5 mg/dL <br>Pria : 4,0-8,5 mg/dL </td>
+                </tr>
+                <tr>
+                  <td>Lansia</td>
+                  <td>Sistolik : < 150 mmHg <br> Diastolik : < 90 mmHg</td> <td>70-130 mg/dL</td>
+                  <td>60-100 mg/dL</td>
+                  <td>Wanita : 2,5-7,5 mg/dL <br>Pria : 4,0-8,5 mg/dL</td>
+                </tr>
+              </tbody>
             </table>
           </div>
         </div>
-      </div>
 
-    </div>
+        <div class="col-sm-12 order-2 order-sm-3 pb-4">
+          <div class="card text-center p-3 card-dua">
+            <h1 class="pt-3 pb-4 heading-dua">Data Kesehatan</h1>
+
+            <div class="input-group mb-3 tes">
+              <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
+              <input type="text" class="form-control filter" placeholder="Cari" aria-label="Filter"
+                aria-describedby="basic-addon1">
+            </div>
+            <div class="table table-responsive">
+              <table class="table table-bordered table-striped table-hover">
+                <thead class="table-dark">
+                  <tr>
+                    <th>Nama</th>
+                    <th>Tanggal</th>
+                    <th>Tensi</th>
+                    <th>Gula Darah</th>
+                    <th>Kolestrol</th>
+                    <th>Asam Urat</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody class="list"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
 
     <div class="container">

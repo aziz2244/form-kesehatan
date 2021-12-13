@@ -14,7 +14,7 @@ class UI {
         const tbody = document.querySelector('.list');
         const tr = document.createElement('tr');
         tr.innerHTML = `
-        <td>${data.nama}</td>
+        <td class="item">${data.nama}</td>
         <td>${data.tgl}</td>
         <td>${data.tknDrh}</td>
         <td>${data.glukosa}</td>
@@ -35,6 +35,31 @@ class UI {
         setTimeout(() => {
             document.querySelector('.alert').remove();
         }, 2500);
+    }
+
+    static ShowAlertCard2(msg, className) {
+        const div = document.createElement('div'),
+            card = document.querySelector('.card-dua'),
+            h1 = document.querySelector('.heading-dua');
+        div.className = `alert ${className}`;
+        div.appendChild(document.createTextNode(msg));
+        card.insertBefore(div, h1)
+        setTimeout(() => {
+            document.querySelector('.alert').remove();
+        }, 2500);
+    }
+
+
+    static Filter(e) {
+        const text = e.target.value.toLowerCase();
+        document.querySelectorAll('.item').forEach(nilai => {
+            const item = nilai.textContent.toLowerCase();
+            if (item.indexOf(text) != -1) nilai.parentElement.style.display = 'revert';
+            // Gunakan revert atau table-row agar table tidak runtuh
+            else {
+                nilai.parentElement.style.display = 'none';
+            }
+        })
     }
 
     static ClearInput() {
@@ -83,13 +108,16 @@ class Store {
     }
 }
 
-document.addEventListener('DOMContentLoaded', Store.DispalyPerson)
+document.addEventListener('DOMContentLoaded', Store.DispalyPerson);
+
+document.querySelector('.filter').addEventListener('keyup', UI.Filter);
 
 document.querySelector('.konvensi').addEventListener('submit', (e) => {
     addDate();
 
     e.preventDefault();
 });
+
 
 function addDate() {
     const nama = document.querySelector('.nama').value,
@@ -100,7 +128,7 @@ function addDate() {
         tgl = document.querySelector('.tanggal').value,
 
         data = new Data(nama, tknDrh, glukosa, kolestrol, asmUrt, tgl);
-    if (nama, tknDrh, glukosa, kolestrol, asmUrt, tgl == '') {
+    if (nama == '' || tknDrh == '' || glukosa == '' || kolestrol == '' || asmUrt == '' || tgl == '') {
         UI.ShowAlert('Data yang di input invalid', 'alert-danger');
     } else {
         UI.BuatTable(data);
@@ -112,6 +140,7 @@ function addDate() {
 
 document.querySelector('.list').addEventListener('click', (e) => {
     UI.Remove(e.target);
-    Store.Remove(e.target.parentElement.previousElementSibling.textContent) //previousElementSibling
+    UI.ShowAlertCard2('Data berhasil di hapus', 'alert-primary');
+    Store.Remove(e.target.parentElement.previousElementSibling.textContent);
     e.preventDefault();
 })

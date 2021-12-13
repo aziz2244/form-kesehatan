@@ -16,9 +16,8 @@
     min-width: 133px;
 }
 
-a {
-    color: white;
-    text-decoration: none;
+.konvensi .tes span {
+    min-width: 20px;
 }
 
 .card {
