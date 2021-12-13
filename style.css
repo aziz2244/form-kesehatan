@@ -23,3 +23,11 @@
 .card {
     min-height: 228px;
 }
+
+.tes-table {
+    min-width: 600px;
+}
+
+.min-table {
+    min-width: 780px;
+}
